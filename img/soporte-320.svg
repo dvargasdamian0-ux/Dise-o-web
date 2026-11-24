@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+<rect width="1000" height="650" rx="30" fill="#e0f2fe"/>
+<rect x="80" y="80" width="840" height="490" rx="25" fill="#0f172a"/>
+<rect x="140" y="135" width="560" height="330" rx="15" fill="#1e293b"/>
+<rect x="185" y="180" width="470" height="235" rx="10" fill="#38bdf8"/>
+<rect x="225" y="220" width="390" height="18" rx="9" fill="#0f172a"/>
+<rect x="225" y="265" width="300" height="18" rx="9" fill="#0f172a"/>
+<rect x="225" y="310" width="350" height="18" rx="9" fill="#0f172a"/>
+<circle cx="785" cy="220" r="70" fill="#2563eb"/>
+<path d="M750 220h70M785 185v70" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+<rect x="725" y="430" width="160" height="55" rx="12" fill="#2563eb"/>
+<text x="805" y="466" text-anchor="middle" font-family="Arial" font-size="22" fill="#fff">SOPORTE TI</text>
+</svg>

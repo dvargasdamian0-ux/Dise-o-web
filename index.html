@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   TechSupport | Portal de Servicios TI
+  </title>
+<!-- Hoja de estilos externa -->
+<!-- T12: Bootstrap 5.3.6 local; complementado por css/style.css -->
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Banco de iconos web -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- =========================
+         HEADER Y NAVEGACIÓN
+    ========================== -->
+<header id="inicio">
+<nav aria-label="Navegación principal" class="navbar navbar-expand-lg navbar-dark nav-principal pa4-navbar">
+<div class="container-fluid pa4-nav-inner">
+<a class="navbar-brand logo" href="index.html"><i aria-hidden="true" class="fa-solid fa-laptop-code"></i> Tech<span>Support</span></a>
+<button aria-controls="techsupportMenu" aria-expanded="false" aria-label="Mostrar u ocultar menú" class="navbar-toggler" data-bs-target="#techsupportMenu" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="techsupportMenu">
+<ul class="navbar-nav menu ms-lg-auto align-items-lg-center">
+<li class="nav-item"><a aria-current="page" class="nav-link active" href="index.html">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+<li class="nav-item"><a class="nav-link" href="productos.html">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- =========================
+             HERO
+        ========================== -->
+<section aria-label="Portada con carrusel de TechSupport" class="hero pa4-hero">
+<!-- T12/T13: carrusel de Bootstrap, dos fotos reales del proyecto, alternancia cada 6 s. -->
+<div aria-label="Fotografías de soporte informático" class="carousel slide carousel-fade pa4-hero-carousel" data-bs-interval="6000" data-bs-pause="false" data-bs-ride="carousel" id="techsupportCarrusel">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Imagen 1: taller" class="active" data-bs-slide-to="0" data-bs-target="#techsupportCarrusel" type="button"></button>
+<button aria-label="Imagen 2: técnicos" data-bs-slide-to="1" data-bs-target="#techsupportCarrusel" type="button"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active" data-bs-interval="6000">
+<img alt="Taller de tecnología con equipos informáticos en mantenimiento" class="d-block w-100" fetchpriority="high" src="img/portada-taller.jpg"/>
+</div>
+<div class="carousel-item" data-bs-interval="6000">
+<img alt="Técnicos revisando placas electrónicas y reparando equipos" class="d-block w-100" src="img/portada-tecnicos.jpg"/>
+</div>
+</div>
+<button aria-label="Mostrar imagen anterior" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#techsupportCarrusel" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+</button>
+<button aria-label="Mostrar imagen siguiente" class="carousel-control-next" data-bs-slide="next" data-bs-target="#techsupportCarrusel" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+</button>
+</div>
+<div class="hero-contenido">
+<p class="hero-subtitulo">PORTAL DE SERVICIOS TI</p>
+<h1>Tu tecnología, siempre <span>en funcionamiento</span></h1>
+<p>Soporte técnico, mantenimiento, redes y seguridad para trabajar con <span class="destacado">continuidad</span>.</p>
+<div class="pa4-hero-acciones">
+<a class="boton" href="contacto.html">Solicitar soporte</a>
+<a class="btn pa4-hero-secundario" href="productos.html">Ver nuestros servicios <i aria-hidden="true" class="fa-solid fa-arrow-right ms-1"></i></a>
+</div>
+</div>
+</section>
+<section aria-labelledby="sobre-techsupport" class="seccion presentacion">
+<div class="intro-grid">
+<article class="intro-principal">
+<p class="etiqueta">BIENVENIDOS A TECHSUPPORT</p>
+<h2 id="sobre-techsupport">Soluciones informáticas para que tu trabajo no se detenga</h2>
+<p>En <span class="destacado">TechSupport</span> ofrecemos una propuesta de servicios de soporte técnico, mantenimiento preventivo y conectividad para hogares y organizaciones.</p>
+<p>Brindamos orientación técnica, atención organizada y recomendaciones para cuidar los equipos y la información.</p>
+<a class="enlace-acento" href="nosotros.html">Conoce nuestra historia <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
+</article>
+<aside aria-labelledby="dato-util" class="intro-aside">
+<div class="aside-icono"><i aria-hidden="true" class="fa-solid fa-circle-info"></i></div>
+<h3 id="dato-util">Consejo de soporte TI</h3>
+<p>Realizar mantenimiento preventivo y respaldos periódicos ayuda a disminuir las interrupciones y la pérdida de información.</p>
+<a href="contacto.html">Solicita una evaluación</a>
+<a class="enlace-acento pa4-enlace-video" href="nosotros.html#video-titulo">Ver video de mantenimiento</a></aside>
+</div>
+</section>
+<!-- =========================
+             SERVICIOS - FLEX WRAP
+        ========================== -->
+<section class="seccion servicios" id="servicios">
+<div class="titulo-seccion">
+<p class="etiqueta">
+      NUESTROS SERVICIOS
+     </p>
+<h2>
+      Soluciones para tus
+      <span>
+       necesidades TI
+      </span>
+</h2>
+<p>
+      Servicios informáticos orientados a mantener tus equipos
+                    y recursos tecnológicos disponibles.
+     </p>
+</div>
+<div class="tarjetas">
+<article class="tarjeta">
+<i class="fa-solid fa-screwdriver-wrench icono">
+</i>
+<h3>
+       Soporte técnico
+      </h3>
+<p>
+       Diagnóstico y solución de incidencias de hardware
+                        y software.
+      </p>
+</article>
+<article class="tarjeta">
+<i class="fa-solid fa-network-wired icono">
+</i>
+<h3>
+       Redes y conectividad
+      </h3>
+<p>
+       Configuración y soporte para redes, conexión
+                        y recursos compartidos.
+      </p>
+</article>
+<article class="tarjeta">
+<i class="fa-solid fa-shield-halved icono">
+</i>
+<h3>
+       Seguridad informática
+      </h3>
+<p>
+       Buenas prácticas para proteger equipos,
+                        información y servicios.
+      </p>
+</article>
+<article class="tarjeta">
+<i class="fa-solid fa-laptop icono">
+</i>
+<h3>
+       Gestión de equipos
+      </h3>
+<p>
+       Instalación, configuración y mantenimiento
+                        de equipos informáticos.
+      </p>
+</article>
+<article class="tarjeta">
+<i class="fa-solid fa-print icono">
+</i>
+<h3>
+       Impresión
+      </h3>
+<p>
+       Configuración y solución de problemas
+                        relacionados con impresoras.
+      </p>
+</article>
+<article class="tarjeta">
+<i class="fa-solid fa-gear icono">
+</i>
+<h3>
+       Software
+      </h3>
+<p>
+       Instalación y configuración de aplicaciones
+                        necesarias para trabajar.
+      </p>
+</article>
+</div>
+</section>
+<!-- =========================
+             PROMOCIÓN - BACKGROUND IMAGE
+        ========================== -->
+<section class="promocion">
+<div class="promocion-contenido">
+<p class="etiqueta">
+      TECNOLOGÍA A TU SERVICIO
+     </p>
+<h2>
+      Trabaja con mayor
+      <span>
+       seguridad y continuidad
+      </span>
+</h2>
+<p>
+      Una atención tecnológica organizada ayuda a reducir
+                    interrupciones y mantener disponibles los recursos
+                    informáticos.
+     </p>
+<a class="boton boton-claro" href="contacto.html">
+      Conocer más
+     </a>
+</div>
+</section>
+<!-- =========================
+             BENEFICIOS - FLEXBOX
+        ========================== -->
+<section class="seccion beneficios" id="beneficios">
+<div class="titulo-seccion">
+<p class="etiqueta">
+      ¿POR QUÉ ELEGIR TECHSUPPORT?
+     </p>
+<h2>
+      Beneficios del
+      <span>
+       soporte TI
+      </span>
+</h2>
+<p>
+      Una gestión ordenada de los servicios tecnológicos
+                    contribuye a mejorar la continuidad del trabajo.
+     </p>
+</div>
+<div class="beneficios-contenedor">
+<article class="beneficio">
+<i class="fa-solid fa-bolt">
+</i>
+<div>
+<h3>
+        Atención oportuna
+       </h3>
+<p>
+        Priorizamos las incidencias para brindar
+                            una respuesta organizada.
+       </p>
+</div>
+</article>
+<article class="beneficio">
+<i class="fa-solid fa-lock">
+</i>
+<div>
+<h3>
+        Mayor seguridad
+       </h3>
+<p>
+        Promovemos buenas prácticas para proteger
+                            la información y los equipos.
+       </p>
+</div>
+</article>
+<article class="beneficio">
+<i class="fa-solid fa-chart-line">
+</i>
+<div>
+<h3>
+        Mejor productividad
+       </h3>
+<p>
+        Buscamos reducir interrupciones para que
+                            los usuarios continúen sus actividades.
+       </p>
+</div>
+</article>
+</div>
+</section>
+<!-- =========================
+             CONTACTO
+        ========================== -->
+<section class="seccion pa2-extra">
+<div class="titulo-seccion">
+<h2>Nuestros servicios <span>en acción</span></h2>
+<p>Conoce cómo realizamos el mantenimiento y diagnóstico de equipos informáticos.</p>
+</div>
+<div class="efectos-grid">
+<article class="efecto efecto-profesional">
+<img alt="Técnico realizando mantenimiento a una PC" src="img/servicio-laptop.jpg"/>
+<div class="efecto-capa">
+<h3>
+        Mantenimiento de PC
+       </h3>
+</div>
+</article>
+<article class="efecto efecto-profesional">
+<img alt="Especialista revisando componentes de computadora" src="img/servicio-componentes.jpg"/>
+<div class="efecto-capa">
+<h3>
+        Diagnóstico de hardware
+       </h3>
+</div>
+</article>
+</div>
+</section>
+<section class="contacto" id="contacto">
+<div class="contacto-contenido">
+<p class="etiqueta">
+      CONTACTO
+     </p>
+<h2>
+      ¿Necesitas
+      <span>
+       soporte TI?
+      </span>
+</h2>
+<p>
+      Comunícate con nuestro equipo para conocer
+                    cómo podemos ayudarte.
+     </p>
+</div>
+<div class="datos-contacto">
+<p>
+<i class="fa-solid fa-envelope">
+</i>
+      soporte@techsupport.com
+      <br/>
+<strong>
+       Correo de atención
+      </strong>
+</p>
+<p>
+<i class="fa-solid fa-phone">
+</i>
+      +51 999 999 999
+      <br/>
+<strong>
+       Atención telefónica
+      </strong>
+</p>
+<p>
+<i class="fa-solid fa-location-dot">
+</i>
+      Lima, Perú
+      <br/>
+<strong>
+       Servicio de soporte TI
+      </strong>
+</p>
+</div>
+</section>
+</main>
+<!-- =========================
+         FOOTER
+    ========================== -->
+<footer>
+<div class="footer-contenido">
+<div>
+<a class="logo" href="index.html">
+<i class="fa-solid fa-laptop-code">
+</i>
+      Tech
+      <span>
+       Support
+      </span>
+</a>
+<p>
+      Portal de Servicios de Soporte TI.
+     </p>
+</div>
+<div class="redes">
+<a aria-label="Facebook (enlace de ejemplo)" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-facebook">
+</i>
+</a>
+<a aria-label="LinkedIn (enlace de ejemplo)" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin">
+</i>
+</a>
+<a aria-label="Instagram (enlace de ejemplo)" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-instagram">
+</i>
+</a>
+</div>
+</div>
+<p class="copyright">
+    © 2026 TechSupport. Todos los derechos reservados.
+   </p>
+</footer>
+<button aria-label="Volver al inicio de la página" class="pa4-volver-arriba" hidden="" id="volver-arriba" title="Volver al inicio de la página" type="button"><i aria-hidden="true" class="fa-solid fa-arrow-up"></i></button><a aria-label="Abrir WhatsApp para compartir una consulta sobre TechSupport" class="boton-flotante" href="https://api.whatsapp.com/send?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20servicios%20de%20TechSupport." rel="noopener noreferrer" target="_blank" title="WhatsApp (seleccionar destinatario)">
+<i class="fa-brands fa-whatsapp">
+</i>
+</a>
+<!-- T12/T13: JavaScript de Bootstrap habilita Navbar y Carousel. -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- Lógica propia: filtros, selección y validaciones. -->
+<script src="js/main.js"></script>
+</body>
+</html>

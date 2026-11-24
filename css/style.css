@@ -1,0 +1,905 @@
+:root {
+    --color-principal: #2563eb;
+    --color-principal-oscuro: #1d4ed8;
+    --color-secundario: #0f172a;
+    --color-fondo: #f8fafc;
+    --color-blanco: #ffffff;
+    --color-texto: #475569;
+    --color-borde: #dbe3ef;
+    --color-acento: #38bdf8;
+    --color-suave: #e0f2fe;
+    --sombra: 0 8px 25px rgba(15, 23, 42, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Selector por etiqueta */
+header {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0 6%;
+}
+
+/* Flexbox: dirección, justificación y alineación */
+.nav-principal {
+    min-height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+/* Selector descendiente */
+.logo span,
+h1 span,
+h2 span {
+    color: var(--color-acento);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: var(--color-acento);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    min-height: 520px;
+    padding: 70px 6%;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.hero-contenido {
+    flex-basis: 50%;
+}
+
+.hero-contenido h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+/* Selector por clase */
+.etiqueta {
+    color: var(--color-acento);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+}
+
+.hero-contenido > p:not(.etiqueta) {
+    max-width: 650px;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.texto-acento {
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 12px 24px;
+    border: 2px solid var(--color-principal);
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: var(--sombra);
+}
+
+.boton:hover {
+    background-color: var(--color-principal-oscuro);
+}
+
+.hero-imagen {
+    flex-basis: 42%;
+}
+
+.hero-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 550px;
+    margin: auto;
+    border: 3px solid var(--color-acento);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+.seccion {
+    padding: 70px 6%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 850px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2.2rem;
+    margin: 8px 0;
+}
+
+.titulo-seccion > p:last-child {
+    color: var(--color-texto);
+}
+
+/* =========================
+   SERVICIOS - FLEX WRAP
+========================= */
+.tarjetas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    padding: 30px 25px;
+    margin: 5px;
+    flex-basis: 30%;
+    flex-grow: 1;
+    min-width: 250px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.tarjeta:hover {
+    border-color: var(--color-principal);
+}
+
+.icono {
+    font-size: 2.3rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+}
+
+/* Selector descendiente */
+.servicios .tarjeta p {
+    color: var(--color-texto);
+}
+
+/* =========================
+   PROMOCIÓN - IMAGEN DE FONDO
+========================= */
+.promocion {
+    min-height: 430px;
+    padding: 80px 6%;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 23, 42, 0.78),
+            rgba(15, 23, 42, 0.78)
+        ),
+        url("img/fondo-tecnologia.svg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.promocion-contenido {
+    max-width: 750px;
+}
+
+.promocion h2 {
+    font-size: 2.5rem;
+    margin: 10px 0 15px;
+}
+
+.promocion p:not(.etiqueta) {
+    margin-bottom: 25px;
+}
+
+.boton-claro {
+    background-color: transparent;
+    border-color: var(--color-blanco);
+}
+
+.boton-claro:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-secundario);
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+.beneficios-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.beneficio {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 5px;
+    flex-basis: 30%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 18px;
+    box-shadow: var(--sombra);
+}
+
+.beneficio > i {
+    color: var(--color-principal);
+    font-size: 1.8rem;
+    margin-top: 4px;
+}
+
+.beneficio p {
+    color: var(--color-texto);
+    margin-top: 5px;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+.contacto {
+    margin: 0 6% 70px;
+    padding: 45px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+.contacto h2 {
+    font-size: 2rem;
+}
+
+.datos-contacto {
+    color: var(--color-texto);
+}
+
+.datos-contacto p {
+    margin: 8px 0;
+}
+
+.datos-contacto i {
+    color: var(--color-principal);
+    width: 25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 40px 6% 20px;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #334155;
+}
+
+.footer-contenido p {
+    color: #cbd5e1;
+    margin-top: 8px;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.redes a {
+    color: var(--color-blanco);
+    font-size: 1.4rem;
+}
+
+.redes a:hover {
+    color: var(--color-acento);
+}
+
+.copyright {
+    text-align: center;
+    color: #94a3b8;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   SELECTOR POR ID
+========================= */
+#inicio {
+    border-bottom: 2px solid var(--color-principal);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 800px) {
+
+    .nav-principal,
+    .hero,
+    .contacto,
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-principal {
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero-contenido,
+    .hero-imagen {
+        flex-basis: 100%;
+    }
+
+    .hero-imagen img {
+        margin: auto;
+    }
+
+    .tarjeta,
+    .beneficio {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .tarjeta,
+    .beneficio {
+        flex-basis: 100%;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.2rem;
+    }
+
+    .promocion h2 {
+        font-size: 2rem;
+    }
+
+    .contacto {
+        padding: 30px 20px;
+    }
+}
+
+/* ==============================================================
+   AMPLIACIÓN PA2: se conservan los estilos y colores originales
+   de la PA1. Temas T05, T06 y T07 añadidos al final.
+   ============================================================== */
+header {position:sticky;top:0;z-index:1000}
+.nav-principal {gap:20px}
+.menu a {transition:color .25s ease,transform .25s ease}
+.menu a:hover {transform:translateY(-2px)}
+.pa2-extra {max-width:1100px;margin:auto}
+.position-demo {position:relative;min-height:195px;max-width:780px;margin:auto;padding:22px;border:2px solid var(--color-principal);border-radius:14px;background:white;box-shadow:var(--sombra)}
+.position-demo span {display:inline-block;padding:10px 15px;border-radius:7px;background:var(--color-suave);margin-right:8px}
+.position-demo .position-static {position:static}
+.position-demo .position-relative {position:relative;top:10px;background:#dbeafe}
+.position-demo .position-absolute {position:absolute;right:15px;top:15px;background:var(--color-principal);color:white}
+.position-demo p {margin-top:38px;color:var(--color-texto)}
+.slider {height:360px;max-width:900px;position:relative;margin:25px auto;border-radius:16px;overflow:hidden;box-shadow:var(--sombra);background:var(--color-secundario)}
+.slide {position:absolute;inset:0;opacity:0;animation:pa2-slider 12s infinite;margin:0}
+.slide:nth-child(2){animation-delay:4s}.slide:nth-child(3){animation-delay:8s}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide figcaption{position:absolute;left:20px;bottom:20px;background:rgba(15,23,42,.78);color:white;padding:12px 18px;border-radius:10px;font-weight:bold}
+@keyframes pa2-slider {0%,28%{opacity:1}33%,95%{opacity:0}100%{opacity:1}}
+.efectos-grid,.pa2-columns {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1100px;margin:25px auto}
+.efecto {height:300px;position:relative;overflow:hidden;border-radius:15px;box-shadow:var(--sombra)}
+.efecto img {width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease}
+.efecto-capa {position:absolute;bottom:0;left:0;right:0;padding:22px;color:white;background:rgba(15,23,42,.83);opacity:0;transform:translateY(25px);transition:opacity .35s,transform .35s}
+.efecto:hover img {transform:scale(1.06) rotate(.5deg);filter:grayscale(.25) brightness(.75) blur(.4px)}
+.efecto:hover .efecto-capa {opacity:1;transform:translateY(0)}
+.pa2-panel {background:white;padding:25px;border:1px solid var(--color-borde);border-radius:16px;box-shadow:var(--sombra);min-width:0}
+.pa2-panel h2 {margin:18px 0 12px}.pa2-panel p {margin-bottom:14px;color:var(--color-texto)}
+.pa2-photo {width:100%;height:auto;max-height:330px;object-fit:cover;border-radius:12px}
+.pa2-list {padding-left:25px;margin:10px 0 25px}.pa2-list li {margin-bottom:10px}
+.pa2-video {max-width:800px;margin:25px auto}
+.pa2-form {display:flex;flex-direction:column;gap:10px}.pa2-form input,.pa2-form textarea,.pa2-form select {width:100%;padding:12px;border:1px solid var(--color-borde);border-radius:8px;font:inherit;transition:border-color .2s,box-shadow .2s}
+.pa2-form input:focus,.pa2-form textarea:focus,.pa2-form select:focus {outline:none;border-color:var(--color-principal);box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+.pa2-form button:hover {filter:brightness(1.08);transform:scale(1.02)}.pa2-note {font-size:.88rem;color:var(--color-texto)}
+.pa2-map {width:100%;height:270px;border:0;border-radius:12px;margin-top:12px}
+.boton-flotante {position:fixed;bottom:22px;right:22px;width:58px;height:58px;display:grid;place-items:center;background:var(--color-principal);color:white;border-radius:50%;box-shadow:var(--sombra);z-index:1100;font-size:25px;transition:transform .25s}
+.boton-flotante:hover {transform:scale(1.12) rotate(6deg)}
+@media (max-width:768px){.nav-principal{flex-wrap:wrap;padding:14px 0}.menu{gap:12px}.menu a{font-size:.9rem}.efectos-grid,.pa2-columns{grid-template-columns:1fr}.slider{height:260px}.position-demo{min-height:225px}.position-demo p{padding-top:15px}.seccion{padding-left:5%;padding-right:5%}}
+@media (max-width:420px){.position-demo .position-absolute{top:62px;right:12px}.position-demo p{margin-top:78px}}
+
+/* ============================================================
+   PA2 FINAL: PORTADA ORIGINAL, PRESENTACIÓN Y EFECTOS T06
+   Las propiedades de position se integran en componentes reales.
+   ============================================================ */
+/* Hero: contenedor relativo y fotografía de fondo con overlay rgba */
+.hero {position:relative;isolation:isolate;min-height:570px;display:flex;align-items:center;justify-content:center;text-align:center;padding:85px 6%;background:#111b30 url('../img/hero-1.jpg') center 42%/cover no-repeat;}
+.hero::before {content:'';position:absolute;inset:0;z-index:-1;background:rgba(12,22,43,.68);}
+.hero-contenido {position:relative;flex-basis:auto;max-width:900px;margin:auto;}
+.hero-contenido h1 {font-size:clamp(2.3rem,4.2vw,3.55rem);line-height:1.12;margin:22px auto;}
+.hero-contenido > p:not(.etiqueta) {max-width:800px;margin:0 auto 26px;color:#fff;}
+.hero-subtitulo {font-size:.98rem;color:#fff;letter-spacing:.03em;}
+.hero .boton {transition:transform .25s,background .25s;}
+.hero .boton:hover {transform:translateY(-3px);}
+/* Posicionamiento: static (tarjetas), relative (hero), absolute (overlay),
+   sticky (header), fixed (botón flotante). */
+.servicios article {position:static;}
+header {position:sticky;top:0;z-index:1000;}
+.boton-flotante {position:fixed;}
+/* Las imágenes son contenido profesional, no etiquetas de clase. */
+.efecto-capa {opacity:1;transform:translateY(0);padding:18px 20px;background:linear-gradient(transparent,rgba(15,23,42,.87));}
+.efecto:hover .efecto-capa {opacity:1;transform:translateY(0);}
+.efecto img {filter:brightness(.94);}
+.efecto:hover img {filter:grayscale(.12) brightness(.83) blur(.3px);transform:scale(1.06) rotate(.3deg);}
+/* Slider CSS: tres fotografías animadas con opacity y keyframes. */
+.slide {animation:pa2-slider 12s infinite backwards;}
+@media (max-width:768px) {
+ .hero {min-height:470px;padding:70px 5%;}
+ .hero-contenido {width:100%;max-width:100%;}
+ .hero-contenido h1 {font-size:clamp(2rem,7vw,3rem);}
+ .efecto {height:280px;}
+}
+@media (prefers-reduced-motion:reduce) { .slide {animation-duration:24s;} }
+
+/* Botón flotante de WhatsApp: mantiene tamaño, posición, sombra y hover. */
+.boton-flotante {background:#25D366;}
+.boton-flotante:hover {background:#20bd5b;}
+
+/* =============================================================
+   MEJORAS FINALES - PORTADA DE DOS FOTOGRAFÍAS (T06)
+   Ciclo de 12 s: cada fotografía permanece 6 s. Sin JavaScript.
+   ============================================================= */
+.hero {background-image:none;overflow:hidden;}
+.hero-fondos {position:absolute;inset:0;z-index:-2;overflow:hidden;}
+.hero-fondo {position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:alternarPortada 12s infinite linear;}
+.hero-fondo-1 {animation-delay:0s;}
+.hero-fondo-2 {animation-delay:-6s;}
+@keyframes alternarPortada {0%,49.99% {opacity:1;} 50%,100% {opacity:0;}}
+.hero::before {z-index:-1;background:rgba(12,22,43,.67);}
+.hero-contenido {z-index:1;}
+/* Imágenes de servicios: relative, absolute, hover, transition, filter */
+.efecto {position:relative;}
+.efecto-capa {position:absolute;}
+/* Botón WhatsApp: se conserva el estilo verde y circular */
+.boton-flotante {background:#25d366;}
+/* Redes sociales (T04, T05 y T07) */
+.siguenos {text-align:center;padding-top:38px;}
+.social-circles {display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:25px auto;}
+.social-circles a {display:grid;place-items:center;width:50px;height:50px;background:#105b5e;color:white;border-radius:50%;font-size:1.4rem;box-shadow:var(--sombra);transition:transform .25s ease,background .25s ease;}
+.social-circles a:hover,.social-circles a:focus-visible {transform:translateY(-4px) scale(1.06);background:#0c777a;}
+/* Diseño responsive: celulares y tabletas */
+@media (max-width:768px) {
+ .hero {min-height:470px;padding:65px 5%;}
+ .hero-contenido h1 {font-size:clamp(1.8rem,7vw,2.7rem);overflow-wrap:break-word;}
+ .hero-fondo {background-position:center;}
+ .nav-principal {gap:12px;}
+ .menu {gap:14px;}
+ .boton-flotante {right:16px;bottom:16px;}
+}
+@media (max-width:400px) {.hero-contenido h1 {font-size:1.9rem;}}
+
+/* T03: palabra destacada dentro de un párrafo */
+.destacado {color:#70e2f8;font-weight:700;}
+/* Prevención de desbordamiento horizontal en pantallas pequeñas */
+html {max-width:100%;overflow-x:clip;}
+img,video,iframe {max-width:100%;}
+@media (max-width:768px) {
+  .nav-principal,.hero-contenido,.seccion {min-width:0;}
+  .menu {flex-wrap:wrap;justify-content:center;}
+  .hero-contenido p {overflow-wrap:anywhere;}
+}
+
+
+/* ============================================================
+   PA3 TECHSUPPORT | T01 a T10
+   1. Navegación accesible y mejoras de componentes existentes.
+   2. T07: presentación institucional, barra lateral y video.
+   3. T09: formulario con foco y validación HTML5; tabla accesible.
+   4. T10: CSS Grid, Flexbox, ::after y animaciones CSS.
+   ============================================================ */
+
+/* T01: tipografía fluida, reset universal y control de anchuras. */
+body { min-width: 280px; }
+img,video,iframe { height:auto; max-width:100%; }
+img { display:block; }
+a:focus-visible, button:focus-visible, .tabla-contenedor:focus-visible {
+  outline: 3px solid var(--color-acento); outline-offset: 3px;
+}
+.menu a { display:inline-block; padding:8px 3px; }
+.menu a[aria-current="page"] { color:var(--color-acento); }
+.menu a[aria-current="page"]::after {
+  content:"";display:block;height:2px;width:100%;background:var(--color-acento);
+}
+/* T06: la animación permanece debajo del contenido y del filtro oscuro. */
+.hero { position:relative;isolation:isolate;background-color:#101d34; }
+.hero-fondos { z-index:0; pointer-events:none; }
+.hero::before { z-index:1;pointer-events:none; }
+.hero-contenido { position:relative;z-index:2; }
+.hero-fondo { background-size:cover;background-repeat:no-repeat; }
+/* En el hero los 2 fotogramas se alternan cada 6 segundos.
+   También se respeta prefers-reduced-motion. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-fondo { animation:none; }
+  .hero-fondo-1 { opacity:1; }
+  .hero-fondo-2 { opacity:0; }
+  *,*::before,*::after { scroll-behavior:auto!important;transition-duration:.01ms!important; }
+}
+/* T03: la misma clase destaca texto en fondos claros y oscuros. */
+.intro-principal .destacado { color:var(--color-principal-oscuro); }
+.intro-principal p, .identidad-card p, .ventaja-card p, .video-descripcion p {
+  line-height:1.85;text-align:left;
+}
+
+/* T10: línea decorativa mediante pseudoelemento ::after. */
+.titulo-seccion h2::after {
+  content:"";display:block;width:58px;height:4px;border-radius:4px;
+  margin:16px auto 0;background:var(--color-principal);
+}
+
+/* T07 + T10: presentación en Grid y barra lateral semántica. */
+.presentacion { background:#eef5ff; }
+.intro-grid { display:grid;grid-template-columns:minmax(0, 1.6fr) minmax(250px, 1fr);
+  max-width:1100px;margin:0 auto;gap:35px;align-items:center; }
+.intro-principal { position:relative;min-width:0; }
+.intro-principal h2 { font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.22;margin:12px 0 20px; }
+.intro-principal p { color:var(--color-texto);margin-bottom:14px; }
+.enlace-acento { display:inline-flex;align-items:center;gap:10px;margin-top:5px;
+  color:var(--color-principal-oscuro);font-weight:700;transition:transform .25s; }
+.enlace-acento:hover { transform:translateX(5px); }
+.intro-aside { background:white;border:1px solid var(--color-borde);
+  border-left:5px solid var(--color-principal);box-shadow:var(--sombra);
+  border-radius:16px;padding:28px; }
+.intro-aside h3 { font-size:1.2rem;margin:12px 0; }
+.intro-aside p { color:var(--color-texto);margin-bottom:16px; }
+.intro-aside a { color:var(--color-principal-oscuro);font-weight:700; }
+.aside-icono { font-size:2rem;color:var(--color-principal); }
+
+/* T07: video semántico con poster y <aside> explicativo. */
+.video-seccion { background:#ecf4ff; }
+.video-layout { display:grid;grid-template-columns:minmax(0, 1.65fr) minmax(220px, .85fr);
+  max-width:1100px;gap:28px;align-items:center;margin:0 auto; }
+.video-layout .pa2-video { max-width:none;margin:0;min-width:0; }
+.video-descripcion { min-width:0;padding:24px;border-radius:14px;background:#fff;
+  border:1px solid var(--color-borde);box-shadow:var(--sombra); }
+.video-descripcion i { color:var(--color-principal);font-size:2rem; }
+.video-descripcion h3 { margin:12px 0; }
+.video-descripcion p { color:var(--color-texto); }
+.video-descripcion .texto-pequeno { font-size:.9rem;margin-top:12px; }
+
+/* T10: misión, visión y ventajas competitivas distribuidas con Grid. */
+.identidad-seccion { background:#f1f7ff; }
+.identidad-grid,.ventajas-grid { display:grid;gap:24px;max-width:1100px;margin:0 auto; }
+.identidad-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.ventajas-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.identidad-card,.ventaja-card { background:white;position:static;border:1px solid var(--color-borde);
+  border-radius:15px;padding:30px;box-shadow:var(--sombra);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; }
+.identidad-card:hover,.ventaja-card:hover { transform:translateY(-5px);border-color:var(--color-acento);
+  box-shadow:0 13px 28px rgba(15,23,42,.13); }
+.identidad-card i,.ventaja-card i { font-size:2rem;color:var(--color-principal); }
+.identidad-card h3,.ventaja-card h3 { margin:10px 0; }
+.identidad-card p,.ventaja-card p { color:var(--color-texto); }
+
+/* T09: controles accesibles y validación nativa del navegador. */
+.pa2-form label { font-weight:700;font-size:.93rem; }
+.pa2-form input,.pa2-form select,.pa2-form textarea { background:#fff; }
+.pa2-form input:focus,.pa2-form select:focus,.pa2-form textarea:focus {
+  outline:2px solid var(--color-principal);outline-offset:1px;
+}
+.pa2-form input:not(:placeholder-shown):invalid,
+.pa2-form textarea:not(:placeholder-shown):invalid { border-color:#c2410c; }
+.pa2-form button { cursor:pointer; transition:transform .25s ease,filter .25s ease; }
+
+/* T09: tabla legible, filas alternadas y scroll interno en móviles. */
+.tarifas-seccion { background:#f5f9fe; }
+.tabla-contenedor { max-width:1100px;margin:0 auto;border:1px solid var(--color-borde);
+  border-radius:16px;overflow-x:auto;background:white;box-shadow:var(--sombra); }
+.tabla-tarifas { width:100%;min-width:570px;border-collapse:collapse;text-align:left; }
+.tabla-tarifas caption { caption-side:top;text-align:left;padding:18px 22px;color:var(--color-texto);
+  font-size:.93rem;font-weight:600; }
+.tabla-tarifas thead { background:var(--color-secundario);color:#fff; }
+.tabla-tarifas th,.tabla-tarifas td { padding:17px 20px;border-bottom:1px solid var(--color-borde); }
+.tabla-tarifas tbody tr:nth-child(even) { background:#eff6ff; }
+.tabla-tarifas tbody tr:hover { background:#dbeafe;transition:background-color .25s; }
+.tabla-tarifas tbody th { color:var(--color-secundario);font-weight:700; }
+.tabla-tarifas tbody td:last-child { font-weight:700;color:var(--color-principal-oscuro);
+  white-space:nowrap; }
+.tarifas-nota { max-width:1100px;margin:18px auto 0;color:var(--color-texto);font-size:.9rem; }
+.tarifas-nota i { color:var(--color-principal);margin-right:8px; }
+
+/* T01: comportamiento adaptable (breakpoint exacto de la rúbrica). */
+@media (max-width:768px) {
+  .intro-grid,.video-layout,.identidad-grid,.ventajas-grid { grid-template-columns:minmax(0,1fr); }
+  .intro-principal h2 { font-size:1.8rem; }
+  .video-descripcion { padding:20px; }
+  .tabla-tarifas th,.tabla-tarifas td { padding:14px 15px; }
+}
+@media (max-width:390px) {
+  .intro-aside,.identidad-card,.ventaja-card { padding:20px; }
+  .logo { font-size:1.3rem; }
+  .menu { gap:9px; }
+  .menu a { font-size:.88rem; }
+}
+
+/* PA3 - T07: Reproductor de YouTube responsive mediante iframe. */
+.youtube-video iframe {
+ display:block;width:100%;aspect-ratio:16 / 9;height:auto;
+ border:0;border-radius:14px;background:#101d34;box-shadow:var(--sombra);
+}
+.youtube-credito { margin:10px 0 0;color:var(--color-texto);font-size:.88rem;line-height:1.55; }
+.youtube-credito a { color:var(--color-principal-oscuro);text-decoration:underline; }
+.youtube-credito a:hover,.youtube-credito a:focus-visible { color:var(--color-principal); }
+
+
+/* ============================================================
+   PA4 ETAPA 1 | T12 y T13 - CATÁLOGO DE SERVICIOS CON BOOTSTRAP
+   Identidad propia TechSupport: Bootstrap para estructura,
+   estilos de marca y animaciones desde nuestra hoja externa.
+   ============================================================ */
+.pa4-encabezado {position:relative;overflow:hidden;background:linear-gradient(135deg,#0f172a,#13375c);color:#fff;padding:76px 0;}
+.pa4-head-grid {display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;}
+.pa4-encabezado h1 {font-size:clamp(2.3rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin:12px 0 22px;}
+.pa4-encabezado h1 span,.pa4-titulos h2 span {color:var(--color-acento);}
+.pa4-encabezado p:not(.etiqueta) {color:#dbeafe;font-size:1.07rem;max-width:580px;margin:0 0 25px;}
+.pa4-encabezado-imagen {width:100%;height:330px;object-fit:cover;border:4px solid rgba(255,255,255,.22);border-radius:24px;box-shadow:0 18px 45px rgba(0,0,0,.3);animation:pa4-flotar 6s ease-in-out infinite;}
+@keyframes pa4-flotar {0%,100% {transform:translateY(0)}50% {transform:translateY(-9px)}}
+.pa4-btn-acento {background:#38bdf8;color:#082f49;border:0;padding:14px 24px;font-weight:800;border-radius:10px;box-shadow:0 8px 20px rgba(56,189,248,.2);}
+.pa4-btn-acento:hover,.pa4-btn-acento:focus-visible {background:#7dd3fc;color:#082f49;transform:translateY(-3px);}
+.pa4-catalogo {background:#f3f8ff;}
+.pa4-titulos h2 {font-size:clamp(1.8rem,3.5vw,2.45rem);font-weight:800;color:#0f172a;}
+.pa4-titulos h2 span {color:#2563eb;}
+.pa4-titulos > p:last-child {color:#475569;}
+.pa4-filtros {display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:14px;}
+.pa4-filtro {border-radius:30px;padding:9px 18px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease;}
+.pa4-filtro:hover {transform:translateY(-2px);box-shadow:0 5px 14px rgba(15,23,42,.12);}
+.pa4-contador {text-align:center;color:#475569;font-size:.92rem;margin-bottom:28px;}
+.pa4-servicio[hidden] {display:none!important;}
+.pa4-card {overflow:hidden;border:1px solid #dbe3ef;border-radius:17px;box-shadow:0 8px 25px rgba(15,23,42,.08);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;animation:pa4-entrada .48s ease both;background:#fff;}
+.pa4-card:hover {transform:translateY(-7px);box-shadow:0 16px 32px rgba(15,23,42,.16);border-color:#93c5fd;}
+@keyframes pa4-entrada {from {opacity:0;transform:translateY(18px)}to {opacity:1;transform:translateY(0)}}
+.pa4-card-media {position:relative;overflow:hidden;}
+.pa4-card-media img {height:190px;width:100%;object-fit:cover;filter:grayscale(12%);transition:transform .35s ease,filter .35s ease;}
+.pa4-card:hover .pa4-card-media img {transform:scale(1.06);filter:grayscale(0%);}
+.pa4-tag {position:absolute;top:15px;right:15px;background:rgba(15,23,42,.85);color:white;font-size:.8rem;font-weight:700;border-radius:30px;padding:5px 12px;}
+.pa4-card .card-body {padding:25px;min-width:0;}
+.pa4-card-icon {width:47px;height:47px;display:grid;place-items:center;border-radius:12px;background:#e0f2fe;color:#0284c7;font-size:1.35rem;margin-bottom:16px;}
+.pa4-card .card-title {font-weight:800;color:#0f172a;margin-bottom:12px;}
+.pa4-card .card-text {color:#475569;line-height:1.75;margin-bottom:22px;font-size:.97rem;}
+.pa4-btn-card {border:1px solid #2563eb;color:#1d4ed8;font-weight:800;border-radius:10px;padding:10px 13px;transition:background .2s ease,transform .2s ease;}
+.pa4-btn-card:hover {background:#2563eb;color:#fff;transform:translateX(2px);}
+.pa4-btn-card i {margin-left:7px;}
+.pa4-aviso {border-radius:12px;line-height:1.6;}
+.pa4-cta {background:#0f172a;color:white;}
+.pa4-cta h2 {font-weight:800;margin-bottom:10px;}
+.pa4-cta p:not(.etiqueta) {color:#cbd5e1;}
+.pa4-cta .pa4-btn-acento {white-space:nowrap;}
+@media (max-width: 768px) {.pa4-head-grid {grid-template-columns:1fr;gap:26px;}.pa4-encabezado{padding:50px 0;}.pa4-encabezado-imagen {height:245px;}.pa4-filtros {gap:8px;}.pa4-filtro {font-size:.9rem;padding:8px 12px;}}
+@media (prefers-reduced-motion:reduce) {.pa4-card,.pa4-encabezado-imagen {animation:none}.pa4-card,.pa4-card-media img,.pa4-btn-card,.pa4-filtro{transition:none}}
+
+
+/* ==========================================================
+   PA4 ETAPA 2 - NAVBAR Y CAROUSEL BOOTSTRAP (T12, T13)
+   Bootstrap 5.3 aporta los comportamientos responsive.
+   Estas reglas conservan los colores y estética de TechSupport.
+   ========================================================== */
+.pa4-navbar {
+  min-height:76px;
+  padding:.65rem 0;
+  width:100%;
+  background:var(--color-secundario);
+}
+.pa4-navbar .pa4-nav-inner {padding:0;max-width:1320px;margin-inline:auto;}
+.pa4-navbar .navbar-brand {color:#fff;font-size:1.48rem;font-weight:800;white-space:nowrap;}
+.pa4-navbar .navbar-brand:focus-visible,.pa4-navbar .navbar-brand:hover {color:#fff;}
+.pa4-navbar .navbar-brand span {color:var(--color-acento);}
+.pa4-navbar .menu {gap:clamp(9px,2vw,25px);list-style:none;flex-wrap:nowrap;}
+.pa4-navbar .menu .nav-link {
+  color:#ecf5ff;
+  font-weight:700;
+  padding:.55rem .35rem;
+  transition:color .25s ease, transform .25s ease;
+}
+.pa4-navbar .menu .nav-link:hover,.pa4-navbar .menu .nav-link:focus-visible,
+.pa4-navbar .menu .nav-link[aria-current="page"] {color:var(--color-acento);}
+.pa4-navbar .menu .nav-link[aria-current="page"]::after {
+  content:"";display:block;height:2px;background:var(--color-acento);margin-top:3px;
+}
+.pa4-navbar .navbar-toggler {border:1px solid rgba(255,255,255,.35);padding:8px 10px;}
+.pa4-navbar .navbar-toggler:focus {box-shadow:0 0 0 .2rem rgba(56,189,248,.4);}
+/* Bootstrap Carousel ocupa todo el banner, sin tapar el mensaje central. */
+.pa4-hero {position:relative;isolation:isolate;overflow:hidden;background:#101d34;min-height:570px;}
+.pa4-hero-carousel {position:absolute;inset:0;z-index:0;overflow:hidden;}
+.pa4-hero-carousel .carousel-inner,.pa4-hero-carousel .carousel-item {height:100%;}
+.pa4-hero-carousel .carousel-item img {width:100%;height:100%;object-fit:cover;object-position:center;}
+.pa4-hero::before {content:"";position:absolute;inset:0;z-index:1;background:rgba(12,22,43,.68);pointer-events:none;}
+.pa4-hero .hero-contenido {position:relative;z-index:2;max-width:900px;}
+.pa4-hero-acciones {display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:4px;}
+.pa4-hero-secundario {
+  padding:12px 22px;border:2px solid rgba(255,255,255,.8);border-radius:8px;
+  color:#fff;font-weight:700;background:rgba(15,23,42,.22);
+  transition:background .25s, transform .25s, color .25s;
+}
+.pa4-hero-secundario:hover,.pa4-hero-secundario:focus-visible {
+  color:#0f172a;background:#fff;transform:translateY(-3px);
+}
+.pa4-hero-carousel .carousel-control-prev,.pa4-hero-carousel .carousel-control-next {
+  width:7%;min-width:46px;z-index:2;opacity:.85;
+}
+.pa4-hero-carousel .carousel-indicators {z-index:2;bottom:8px;}
+.pa4-hero-carousel .carousel-indicators button {height:4px;width:33px;border-radius:4px;}
+@media (max-width:991.98px) {
+  .pa4-navbar {padding:.8rem 0;}
+  .pa4-navbar .navbar-collapse {padding:12px 0 8px;}
+  .pa4-navbar .menu {width:100%;gap:3px;align-items:stretch!important;flex-direction:column;flex-wrap:nowrap;}
+  .pa4-navbar .menu .nav-link {display:block;padding:11px 14px;border-radius:8px;}
+  .pa4-navbar .menu .nav-link:hover,.pa4-navbar .menu .nav-link[aria-current="page"] {background:rgba(56,189,248,.12);}
+  .pa4-navbar .menu .nav-link[aria-current="page"]::after {display:none;}
+}
+@media (max-width:768px) {
+  .pa4-navbar {flex-wrap:nowrap;padding:10px 0;}
+  .pa4-navbar .menu {justify-content:flex-start;}
+  .pa4-hero {min-height:520px;padding:85px 8% 75px;}
+  .pa4-hero-carousel .carousel-control-prev,.pa4-hero-carousel .carousel-control-next {width:40px;min-width:40px;}
+  .pa4-hero .hero-contenido {padding:0 10px;}
+}
+@media (max-width:420px) {
+  .pa4-hero {min-height:560px;}
+  .pa4-hero-carousel .carousel-control-prev,.pa4-hero-carousel .carousel-control-next {top:auto;bottom:10px;height:52px;}
+  .pa4-hero-acciones .boton,.pa4-hero-acciones .btn {font-size:.91rem;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .pa4-hero-secundario,.pa4-navbar .menu .nav-link {transition:none;}
+}
+
+
+/* ==============================================================
+   PA4 ETAPA 3 | T11 - JS, ALERTAS Y DOS ANIMACIONES CSS
+   @keyframes pa4-flotar: banner de Servicios.
+   @keyframes pa4-entrada: entrada de las tarjetas del catálogo.
+   Además se incorpora animación visual al resultado de validación.
+   ============================================================== */
+.pa4-video-nosotros {background:#edf5ff;}
+.pa4-video-nosotros .video-layout {max-width:1100px;}
+.pa4-enlace-video {margin-left:10px;}
+.pa4-resultado-form {margin:10px 0 2px;animation:pa4-mostrar-aviso .4s ease-out both;}
+.pa4-resultado-form[hidden] {display:none!important;}
+.pa4-boton-limpiar {align-self:flex-start;border-radius:8px;min-height:42px;}
+@keyframes pa4-mostrar-aviso {
+  from {opacity:0;transform:translateY(8px);}
+  to {opacity:1;transform:translateY(0);}
+}
+.pa4-volver-arriba {
+  position:fixed;bottom:95px;right:22px;z-index:1000;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--color-secundario);color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  display:grid;place-items:center;cursor:pointer;
+  box-shadow:0 6px 20px rgba(15,23,42,.25);
+  transition:transform .2s ease,background-color .2s ease;
+}
+.pa4-volver-arriba[hidden] {display:none!important;}
+.pa4-volver-arriba:hover,.pa4-volver-arriba:focus-visible {
+  transform:translateY(-3px);background:var(--color-principal-oscuro);
+}
+.pa4-volver-arriba:focus-visible {outline:3px solid var(--color-acento);outline-offset:3px;}
+@media (max-width:768px) {
+  .pa4-enlace-video {display:flex;width:fit-content;margin:12px 0 0;}
+  .pa4-volver-arriba {right:16px;bottom:92px;width:44px;height:44px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .pa4-resultado-form {animation:none;}
+  .pa4-volver-arriba {transition:none;}
+}
+
+/* PA4 – Multimedia local estable en equipos y dispositivos móviles. */
+.pa4-video-local video {display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0b1328;border-radius:14px;object-fit:contain;box-shadow:0 12px 28px rgba(15,23,42,.14);}
+.pa4-video-local .youtube-credito {margin-top:12px;color:#475569;font-size:.92rem;line-height:1.55;}

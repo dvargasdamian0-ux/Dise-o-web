@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   TechSupport | Contacto
+  </title>
+<!-- Hoja de estilos externa -->
+<!-- T12: Bootstrap 5.3.6 local; complementado por css/style.css -->
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Banco de iconos web -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav aria-label="Navegación principal" class="navbar navbar-expand-lg navbar-dark nav-principal pa4-navbar">
+<div class="container-fluid pa4-nav-inner">
+<a class="navbar-brand logo" href="index.html"><i aria-hidden="true" class="fa-solid fa-laptop-code"></i> Tech<span>Support</span></a>
+<button aria-controls="techsupportMenu" aria-expanded="false" aria-label="Mostrar u ocultar menú" class="navbar-toggler" data-bs-target="#techsupportMenu" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="techsupportMenu">
+<ul class="navbar-nav menu ms-lg-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+<li class="nav-item"><a class="nav-link" href="productos.html">Servicios</a></li>
+<li class="nav-item"><a aria-current="page" class="nav-link active" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<section class="seccion">
+<div class="titulo-seccion">
+<p class="etiqueta">
+      CONTACTO
+     </p>
+<h1>
+      Solicita
+      <span class="texto-acento">
+       soporte TI
+      </span>
+</h1>
+<p>
+      Cuéntanos qué inconveniente necesitas resolver.
+     </p>
+</div>
+<div class="pa2-columns">
+<article class="pa2-panel">
+<h2>
+       Formulario de contacto
+      </h2>
+<form action="#" aria-describedby="aviso-formulario" aria-label="Formulario demostrativo de solicitud de soporte" class="pa2-form" data-form-demo="true" id="form-contacto" method="get">
+<label for="nombre">
+        Nombre
+       </label>
+<input autocomplete="name" id="nombre" maxlength="80" minlength="3" name="nombre" placeholder="Nombre completo" required="" type="text"/>
+<label for="email">
+        Correo electrónico
+       </label>
+<input autocomplete="email" id="email" name="email" placeholder="correo@ejemplo.com" required="" type="email"/>
+<label for="tipo">
+        Tipo de atención
+       </label>
+<select id="tipo" name="tipo" required=""><option disabled="" selected="" value="">Selecciona un servicio</option>
+<option value="soporte-técnico">
+         Soporte técnico
+        </option>
+<option value="mantenimiento">
+         Mantenimiento
+        </option>
+<option value="redes">
+         Redes
+        </option>
+<option value="seguridad">
+         Seguridad
+        </option>
+<option value="software">Instalación de software</option><option value="remoto">Soporte remoto</option><option value="impresion">Impresoras</option></select>
+<label for="mensaje">
+        Mensaje
+       </label>
+<textarea id="mensaje" maxlength="1200" minlength="10" name="mensaje" placeholder="Describe tu solicitud" required="" rows="5"></textarea>
+<button class="boton" type="submit">
+        Enviar solicitud
+       </button><div aria-live="polite" class="alert alert-success pa4-resultado-form" hidden="" id="form-resultado" role="status">Tus datos se han validado en este navegador. Demostración académica: no se ha enviado ninguna solicitud.</div><button class="btn btn-outline-secondary pa4-boton-limpiar" type="reset">Limpiar campos</button>
+<p class="pa2-note" id="aviso-formulario">Demostración académica: el formulario valida los datos localmente y no envía correos ni registra información en un servidor.</p>
+</form>
+</article>
+<aside class="pa2-panel">
+<h2>
+       Información de contacto
+      </h2>
+<p>
+<i class="fa-solid fa-envelope">
+</i>
+       soporte@techsupport.com
+      </p>
+<p>
+<i class="fa-solid fa-phone">
+</i>
+       +51 999 999 999
+      </p>
+<p>
+<i class="fa-solid fa-location-dot">
+</i>
+       Lima, Perú
+      </p>
+<h3>
+       Ubicación referencial
+      </h3>
+<iframe class="pa2-map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.05%2C-12.12%2C-77.00%2C-12.08&amp;layer=mapnik" title="Mapa referencial de Lima">
+</iframe>
+<p class="pa2-note">
+       Datos de contacto de ejemplo para fines académicos.
+      </p>
+</aside>
+</div>
+</section>
+<section aria-labelledby="tarifas-titulo" class="seccion tarifas-seccion">
+<div class="titulo-seccion"><p class="etiqueta">SERVICIOS Y TARIFAS</p><h2 id="tarifas-titulo">Tarifas de <span>referencia</span></h2><p>Conoce los servicios más solicitados. Los importes son ilustrativos y pueden variar según el diagnóstico.</p></div>
+<div aria-label="Tabla de tarifas de TechSupport" class="tabla-contenedor" role="region" tabindex="0">
+<table class="tabla-tarifas">
+<caption>Precios referenciales de soporte técnico en soles (S/)</caption>
+<thead><tr><th scope="col">Servicio</th><th scope="col">Descripción</th><th scope="col">Tarifa desde</th></tr></thead>
+<tbody>
+<tr><th scope="row">Diagnóstico técnico</th><td>Evaluación de computadora o laptop</td><td>S/ 40</td></tr>
+<tr><th scope="row">Mantenimiento preventivo</th><td>Limpieza física y optimización general</td><td>S/ 80</td></tr>
+<tr><th scope="row">Instalación de software</th><td>Instalación y configuración de aplicaciones</td><td>S/ 50</td></tr>
+<tr><th scope="row">Soporte de redes</th><td>Evaluación y solución de conectividad</td><td>S/ 100</td></tr>
+<tr><th scope="row">Soporte remoto</th><td>Asistencia para incidencias comunes</td><td>S/ 35</td></tr>
+</tbody>
+</table>
+</div>
+<p class="tarifas-nota"><i aria-hidden="true" class="fa-solid fa-circle-info"></i> Tarifas ficticias para la demostración académica. No constituyen una oferta comercial.</p>
+</section>
+<section aria-labelledby="titulo-siguenos" class="seccion siguenos"><div class="titulo-seccion"><h2 id="titulo-siguenos">Síguenos</h2><p>Conoce más sobre nuestros servicios y novedades.</p></div><div class="social-circles"><a aria-label="Facebook (enlace de ejemplo)" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram (enlace de ejemplo)" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a><a aria-label="LinkedIn (enlace de ejemplo)" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a aria-label="YouTube (enlace de ejemplo)" href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a></div></section></main>
+<footer>
+<div class="footer-contenido">
+<div>
+<a class="logo" href="index.html">
+<i class="fa-solid fa-laptop-code">
+</i>
+      Tech
+      <span>
+       Support
+      </span>
+</a>
+<p>
+      Portal de Servicios de Soporte TI.
+     </p>
+</div>
+<div class="redes">
+<a aria-label="Facebook (enlace de ejemplo)" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-facebook">
+</i>
+</a>
+<a aria-label="LinkedIn (enlace de ejemplo)" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin">
+</i>
+</a>
+<a aria-label="Instagram (enlace de ejemplo)" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-instagram">
+</i>
+</a>
+</div>
+</div>
+<p class="copyright">
+    © 2026 TechSupport. Todos los derechos reservados.
+   </p>
+</footer>
+<button aria-label="Volver al inicio de la página" class="pa4-volver-arriba" hidden="" id="volver-arriba" title="Volver al inicio de la página" type="button"><i aria-hidden="true" class="fa-solid fa-arrow-up"></i></button><a aria-label="Abrir WhatsApp para compartir una consulta sobre TechSupport" class="boton-flotante" href="https://api.whatsapp.com/send?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20servicios%20de%20TechSupport." rel="noopener noreferrer" target="_blank" title="WhatsApp (seleccionar destinatario)">
+<i class="fa-brands fa-whatsapp">
+</i>
+</a>
+<!-- T12/T13: JavaScript de Bootstrap habilita Navbar y Carousel. -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- Lógica propia: filtros, selección y validaciones. -->
+<script src="js/main.js"></script>
+</body>
+</html>
